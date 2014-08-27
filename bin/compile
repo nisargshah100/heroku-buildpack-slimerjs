@@ -26,7 +26,7 @@ tar jxf $CACHE_DIR/$FILE_NAME -C $CACHE_DIR
 mv $CACHE_DIR/$ARCHIVE_NAME $BUILD_DIR/vendor/slimerjs
 
 echo "-----> exporting PATH and LIBRARY_PATH"
-# PROFILE_PATH="$BUILD_DIR/.profile.d/slimerjs.sh"
-# mkdir -p $(dirname $PROFILE_PATH)
-echo 'export PATH="$PATH:vendor/slimerjs"'
-echo 'export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:vendor/slimerjs"'
+PROFILE_PATH="$BUILD_DIR/.profile.d/slimerjs.sh"
+mkdir -p $(dirname $PROFILE_PATH)
+echo 'export PATH="$PATH:vendor/slimerjs"' >> $PROFILE_PATH
+echo 'export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:vendor/slimerjs"' >> $PROFILE_PATH

@@ -7,4 +7,4 @@ config_vars:
   LD_LIBRARY_PATH: "/usr/local/lib:/usr/lib:/lib:/app/vendor/slimerjs"
 default_process_types:
   console: "vendor/slimerjs/slimerjs"
-EO
+EOF
