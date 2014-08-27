@@ -1,0 +1,6 @@
+{
+  "name": "SlimerJS",
+  "dependencies": {
+    "slimerjs": "0.9.1-2"
+  }
+}

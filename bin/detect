@@ -1,4 +1,0 @@
-#!/bin/sh
-
-echo "SlimerJS"
-exit 0
