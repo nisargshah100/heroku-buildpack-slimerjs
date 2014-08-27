@@ -11,7 +11,7 @@ VERSION="0.9.2"
 # Buildpack URL
 ARCHIVE_NAME=slimerjs-${VERSION}-linux-x86_64
 FILE_NAME=${ARCHIVE_NAME}.tar.bz2
-BUILDPACK_SLIMERJS_PACKAGE=ghttp://download.slimerjs.org/releases/${VERSION}/${FILE_NAME}
+BUILDPACK_SLIMERJS_PACKAGE=http://download.slimerjs.org/releases/${VERSION}/${FILE_NAME}
 
 mkdir -p $CACHE_DIR
 if ! [ -e $CACHE_DIR/$FILE_NAME ]; then
@@ -25,8 +25,8 @@ mkdir -p $BUILD_DIR/vendor
 tar jxf $CACHE_DIR/$FILE_NAME -C $CACHE_DIR
 mv $CACHE_DIR/$ARCHIVE_NAME $BUILD_DIR/vendor/slimerjs
 
-# echo "-----> exporting PATH and LIBRARY_PATH"
-# PROFILE_PATH="$BUILD_DIR/.profile.d/slimerjs"
-# mkdir -p $(dirname $PROFILE_PATH)
-# echo 'export PATH="$PATH:vendor/slimerjs"' >> $PROFILE_PATH
-# echo 'export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:vendor/slimerjs"' >> $PROFILE_PATH
+echo "-----> exporting PATH and LIBRARY_PATH"
+PROFILE_PATH="$BUILD_DIR/.profile.d/slimerjs"
+mkdir -p $(dirname $PROFILE_PATH)
+echo 'export PATH="$PATH:vendor/slimerjs"' >> $PROFILE_PATH
+echo 'export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:vendor/slimerjs"' >> $PROFILE_PATH
