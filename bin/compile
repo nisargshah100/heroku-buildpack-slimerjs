@@ -23,7 +23,9 @@ echo "-----> Extracting SlimerJS ${VERSION} binaries to ${BUILD_DIR}/vendor/slim
 mkdir -p $CACHE_DIR/$ARCHIVE_NAME
 mkdir -p $BUILD_DIR/vendor
 tar jxf $CACHE_DIR/$FILE_NAME -C $CACHE_DIR
-ls $CACHE_DIR
+ls $CACHE_DIR/slimerjs-0.9.2-linux-x86_64
+echo "--------"
+ls $CACHE_DIR/slimerjs-0.9.2
 mv $CACHE_DIR/$ARCHIVE_NAME $BUILD_DIR/vendor/slimerjs
 
 echo "-----> exporting PATH and LIBRARY_PATH"
