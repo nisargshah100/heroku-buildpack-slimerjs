@@ -19,7 +19,7 @@ if ! [ -e $BUILD_DIR/$FILE_NAME ]; then
   curl $BUILDPACK_SLIMERJS_PACKAGE -L -s -o $BUILD_DIR/$FILE_NAME
 fi
 
-# echo "-----> Extracting SlimerJS ${VERSION} binaries to ${BUILD_DIR}/vendor/slimerjs"
+echo "-----> Extracting SlimerJS ${VERSION} binaries to ${BUILD_DIR}/vendor/slimerjs"
 # mkdir -p $CACHE_DIR/$ARCHIVE_NAME
 # mkdir -p $BUILD_DIR/vendor
 # tar jxf $CACHE_DIR/$FILE_NAME -C $CACHE_DIR
