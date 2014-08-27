@@ -3,8 +3,8 @@
 cat << EOF
 ---
 config_vars:
-  PATH: "/usr/local/bin:/usr/bin:/bin:/app/vendor/slimerjs"
-  LD_LIBRARY_PATH: "/usr/local/lib:/usr/lib:/lib:/app/vendor/slimerjs"
+  PATH: "/usr/local/bin:/usr/bin:/bin:/app/vendor/slimerjs/slimerjs-0.9.2/slimerjs"
+  LD_LIBRARY_PATH: "/usr/local/lib:/usr/lib:/lib:/app/vendor/slimerjs/slimerjs-0.9.2"
 default_process_types:
-  console: "vendor/slimerjs/slimerjs"
+  console: "vendor/slimerjs/slimerjs-0.9.2/slimerjs"
 EOF
